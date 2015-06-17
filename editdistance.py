@@ -32,9 +32,12 @@ class EditDistance(Distance):
 
     def Match(self,a,b):
 
+
+    def GAP():
+        
     def Editdistance(self):
 
-    def Backtracking(self):
+   
         
 
 if __name__ == "__main__":
