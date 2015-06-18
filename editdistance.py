@@ -25,15 +25,16 @@ class EditDistance(Distance):
         self.Distance(seq1,seq2)
         self.__match=match
         self.__mismatch=mismatch
-        self.__table=int[len(seq2)][len(seq1)]
-        self.__back=int[len(seq2)][len(seq1)]
+        self.__table=int[len(seq2)+1][len(seq1)+1]
+        self.__back=int[len(seq2)+1][len(seq1)+1]
 
     def PrintTable(self):
 
     def Match(self,a,b):
 
 
-    def GAP():
+    def GAP(a,b,c):
+        return b*a+c
         
     def Editdistance(self):
 
