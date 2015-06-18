@@ -36,10 +36,26 @@ class EditDistance(Distance):
     def GAP(a,b,c):
         return b*a+c
         
-    def Editdistance(self):
+    def Editdistance(a,b):
+        m=len(a)
+        n=len(b)
+
+        table=__table
+        table[0,0]=0
+
+        for i in range(n+1):
+            d[i,0]=i
+        for j in range(m+1):
+            d[0,j]=j
+
+        for i in range(1,n+1):
+            for j in range(1,m+1):
+                d[i,j]=min(d[i-1,j-1]+EditDistance.Match(a[i-1],b[j-1]),d[i-1,j]+EditDistance.GAP(1,0,1),d[i,j-1]+EditDistance.GAP(1,0,1))
+
+        EditDistance.PrintTable
+
 
    
         
 
 if __name__ == "__main__":
-   
